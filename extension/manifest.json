@@ -1,0 +1,19 @@
+{
+  "manifest_version": 2,
+
+  "name": "EchoShopShop Helper",
+  "description": "This extension captures login information for alexa.amazon.com.",
+  "version": "1.0",
+
+  "background": {
+    "scripts": ["background.js"]
+  },
+
+  "permissions": [
+    "https://echoshopshop.narwhal.in/",
+    "cookies",
+
+    "http://amazon.com/",
+    "https://amazon.com/"
+  ]
+}

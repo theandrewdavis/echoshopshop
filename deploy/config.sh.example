@@ -1,0 +1,21 @@
+# Dropbox app key and secret (find them at https://www.dropbox.com/developers/apps)
+ESS_DROPBOX_KEY=abcd1234
+ESS_DROPBOX_SECRET=abcd1234
+
+# Port the app will listen on
+ESS_PORT=8002
+
+# Domain to serve the web app and to register with LetsEncrypt
+ESS_DOMAIN=echoshopshop.example.com
+
+# Email to use when registering for a LetsEncrypt certificate
+ESS_LETSENCRYPT_EMAIL=email@example.com
+
+# Gmail account to send error emails from. It must allow less secure apps in the Gmail UI
+# (see https://www.google.com/settings/security/lesssecureapps). This can be the same
+# address as the receiver
+ESS_ERR_EMAIL_SENDER_EMAIL=sender-email@gmail.com
+ESS_ERR_EMAIL_SENDER_PASSWORD=p@$$w0rd
+
+# Email account to send error emails to
+ESS_ERR_EMAIL_RECEIVER=receiver-email@example.com

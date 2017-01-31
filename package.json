@@ -1,0 +1,16 @@
+{
+  "name": "server",
+  "version": "1.0.0",
+  "repository": "https://github.com/theandrewdavis/echoshopshop",
+  "private": true,
+  "main": "index.js",
+  "dependencies": {
+    "body-parser": "^1.16.1",
+    "bplist": "0.0.4",
+    "express": "^4.14.1",
+    "express-session": "^1.15.0",
+    "minimist": "^1.2.0",
+    "pug": "^2.0.0-beta10",
+    "request": "^2.79.0"
+  }
+}

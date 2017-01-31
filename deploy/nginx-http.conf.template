@@ -1,0 +1,14 @@
+# On Ubuntu, copy this to /etc/nginx/sites-enabled/echoshopshop-http
+
+server {
+    listen 80;
+    server_name $ESS_DOMAIN;
+
+    location / {
+        return 301 https://$host$request_uri;
+    }
+
+    location /.well-known/acme-challenge/ {
+        root $PWD/letsencrypt/html/;
+    }
+}

@@ -1,0 +1,12 @@
+# On Ubuntu, copy this to /etc/nginx/sites-enabled/echoshopshop-https
+
+server {
+    listen 443 ssl;
+    server_name $ESS_DOMAIN;
+    ssl_certificate $PWD/letsencrypt/config/live/$ESS_DOMAIN/fullchain.pem;
+    ssl_certificate_key $PWD/letsencrypt/config/live/$ESS_DOMAIN/privkey.pem;
+
+    location / {
+        proxy_pass http://localhost:$ESS_PORT;
+    }
+}

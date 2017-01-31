@@ -1,0 +1,52 @@
+html
+  head
+    meta(charset="utf8")
+    title EchoShopShop
+    style.
+        .flash {
+            font-style: italic;
+        }
+        form {
+            display: inline;
+        }
+        .link-button {
+            display: inline;
+            padding-left: 0;
+            background: none;
+            border: none;
+            color: blue;
+            text-decoration: underline;
+            cursor: pointer;
+            font-size: 1em;
+            font-family: serif;
+        }
+        .link-button:focus {
+            outline: none;
+        }
+        .link-button:active {
+            color:red;
+        }
+  body
+    if flash
+        p.flash= flash
+
+    if dropboxEmail
+        span Logged in to Dropbox as #{dropboxEmail}. &nbsp;
+        form(action="/logout/dropbox",method="POST")
+            button(type="submit",class="link-button") Log out
+    else
+        p 
+            a(href=`${dropboxLink}`) Log in to Dropbox
+
+    if alexaEmail
+        p Logged in to Alexa as #{alexaEmail}.
+    else
+        p Install the Chrome extension to log in to Alexa.
+
+    if dropboxEmail && alexaEmail
+        if syncing
+            form(action="/sync/stop",method="POST")
+                button(type="submit",class="link-button") Stop syncing
+        else
+            form(action="/sync/start",method="POST")
+                button(type="submit",class="link-button") Start syncing

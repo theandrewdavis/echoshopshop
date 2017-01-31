@@ -1,0 +1,7 @@
+AuthUser=$ESS_ERR_EMAIL_SENDER_EMAIL
+AuthPass=$ESS_ERR_EMAIL_SENDER_PASSWORD
+FromLineOverride=YES
+mailhub=smtp.gmail.com:587
+UseSTARTTLS=YES
+UseTLS=Yes
+RewriteDomain=gmail.com
